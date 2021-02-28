@@ -18,6 +18,9 @@ spec:
       creationTimestamp: null
       labels:
         run: alpaca-prod
+        app: alpaca
+        env: prod
+        ver: "1"
     spec:
       containers:
       - image: gcr.io/kuar-demo/kuard-arm:blue
@@ -25,4 +28,3 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
-

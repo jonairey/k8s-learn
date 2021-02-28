@@ -18,3 +18,6 @@ kubectl expose deployment bandicoot-prod
 
 kubectl get services -o wide
 
+ALPACA_POD=$(kubectl get pods -l app=alpaca \
+-o jsonpath='{.items[0].metadata.name}')
+kubectl port-forward $ALPACA_POD 48858:8080
