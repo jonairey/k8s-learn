@@ -8,6 +8,7 @@ metadata:
     ver: "1"
   name: alpaca-prod
 spec:
+  hostNetwork: true
   replicas: 3
   selector:
     matchLabels:
